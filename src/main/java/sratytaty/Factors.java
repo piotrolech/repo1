@@ -28,7 +28,15 @@ public class Factors {
         this.y = y;
     }
 
-    public void getIloczyn(int i, int i1, int i2) {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Factors)) return false;
+
+        Factors factors = (Factors) o;
+
+        if (x != factors.x) return false;
+        return y == factors.y;
     }
 }
 
