@@ -27,5 +27,8 @@ public class Factors {
     public void setY(int y) {
         this.y = y;
     }
+
+    public void getIloczyn(int i, int i1, int i2) {
+    }
 }
 
