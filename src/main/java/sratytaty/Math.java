@@ -1,5 +1,6 @@
 package sratytaty;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -7,7 +8,16 @@ import java.util.List;
  */
 public class Math {
     public static List<Factors> getFactors(int number) {
+        List<Factors> factors = new LinkedList<Factors>();
 
-        return null;
+        for (int i = 1; i < number+1; i++) {
+            if(number%i == 0){
+                Factors factor = new Factors(0,0);
+                factor.setX(i);
+                factor.setY(number/i);
+                factors.add(factor);
+            }
+        }
+        return factors;
     }
 }
