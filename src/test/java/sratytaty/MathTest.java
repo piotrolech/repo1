@@ -20,14 +20,17 @@ public class MathTest {
         int number = 10;
 
         // when
-        List<Factors> factorsList = getFactors(10);
+        List<Factors> factorsList = Math.getFactors(number);
         Factors factor1 = new Factors(1,10);
         Factors factor2 = new Factors(2,5);
         Factors factor3 = new Factors(5,2);
         Factors factor4 = new Factors(1,10);
 
         // then
-        assertTrue(factorsList.contains(factor1));
+        assertEquals(4, factorsList.size());
+//        assertEquals(1, factorsList.get(0).getX());
+//        assertEquals(10, factorsList.get(0).getY());
+        assertTrue(factorsList.contains(new Factors(1,10)));
         assertTrue(factorsList.contains(factor2));
         assertTrue(factorsList.contains(factor3));
         assertTrue(factorsList.contains(factor4));
